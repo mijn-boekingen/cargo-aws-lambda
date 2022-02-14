@@ -12,7 +12,7 @@ Run `cargo install cargo-aws-lambda`.
 
 Go to your project directory and run `cargo aws-lambda <ARN> <BIN>` to deploy the code to AWS Lambda, where `ARN` is the full ARN of the Lambda function (e.g. `arn:aws:lambda:eu-north-1:123456789123:function:MyLambdaFuncDev`) and `BIN` the name of the binary (e.g. `mylambdafunc`, if you have `src/bin/mylambdafunc.rs` with a `main` function in your project).
 
-        cargo aws-lambda arn:aws:lambda:eu-north-1:123456789123:function:MyLambdaFuncDev mylambdafunc
+    cargo aws-lambda arn:aws:lambda:eu-north-1:123456789123:function:MyLambdaFuncDev mylambdafunc
 
 **Optional.** If you don't want to pass the function ARN on command-line, you can pass in a key to a function defined in a file named Lambda.toml ([example](./examples/aws-lambda-hello/Lambda.toml)) located in your project's root directory like below.
 
@@ -21,7 +21,7 @@ Go to your project directory and run `cargo aws-lambda <ARN> <BIN>` to deploy th
 [arns]
 dev = "arn:aws:lambda:eu-north-1:1234:function:MyLambdaFuncDev"
 prod = "arn:aws:lambda:eu-north-1:1234:function:MyLambdaFuncProd"
-``` 
+```
 
 Now you can run the following command to deploy to the first ARN defined.
 
